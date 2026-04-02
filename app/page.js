@@ -231,6 +231,17 @@ function WorkflowIcon({ type }) {
 export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (!section) {
+      return;
+    }
+
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+
   return (
     <main className="page-shell">
       <script
@@ -243,7 +254,17 @@ export default function HomePage() {
 
       <div className="container">
         <header className={`site-header${isMobileMenuOpen ? " mobile-menu-open" : ""}`}>
-          <a href="#top" className="brand" aria-label="Forsch home">
+          <a
+            href="/"
+            className="brand"
+            aria-label="Forsch home"
+            onClick={(event) => {
+              event.preventDefault();
+              setIsMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.replaceState(null, "", window.location.pathname + window.location.search);
+            }}
+          >
             <Image
               src="/forsch.svg"
               alt="Forsch"
@@ -255,10 +276,42 @@ export default function HomePage() {
           </a>
 
           <nav className="desktop-nav" aria-label="Primary">
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#use-cases">Use Cases</a>
-            <a href="#contact">Contact</a>
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("services");
+              }}
+            >
+              Services
+            </a>
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("process");
+              }}
+            >
+              Process
+            </a>
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("use-cases");
+              }}
+            >
+              Use Cases
+            </a>
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("contact");
+              }}
+            >
+              Contact
+            </a>
           </nav>
 
           <a className="button button-primary button-small" href="mailto:hello@forsch.io">
@@ -287,13 +340,34 @@ export default function HomePage() {
           {isMobileMenuOpen ? (
             <div id="mobile-navigation-panel" className="mobile-menu-panel">
               <nav className="mobile-nav" aria-label="Mobile">
-                <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>
+                <a
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    scrollToSection("services");
+                  }}
+                >
                   Services
                 </a>
-                <a href="#process" onClick={() => setIsMobileMenuOpen(false)}>
+                <a
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    scrollToSection("process");
+                  }}
+                >
                   Process
                 </a>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <a
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    scrollToSection("contact");
+                  }}
+                >
                   Contact
                 </a>
               </nav>
@@ -326,7 +400,14 @@ export default function HomePage() {
                 Book a discovery call
                 <ArrowIcon />
               </a>
-              <a className="button button-secondary" href="#process">
+              <a
+                className="button button-secondary"
+                href="/"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection("process");
+                }}
+              >
                 See how we work
               </a>
             </div>
