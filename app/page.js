@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { useCaseLibrary } from "./use-cases/data";
 
 const workflowSteps = [
   { title: "Capture inbound leads from forms and CRM", icon: "chat" },
@@ -63,15 +65,6 @@ const stats = [
   { value: "12+", label: "AI systems shipped to production" },
   { value: "3x", label: "average build speed vs. in-house starts" },
   { value: "90%", label: "of clients expand scope after the first project" }
-];
-
-const useCases = [
-  "AI lead qualification and follow-up",
-  "Support copilots and knowledge workflows",
-  "Internal ops automation and approvals",
-  "Reporting, analytics, and decision support",
-  "Workflow modernization across teams",
-  "AI-powered product experiences"
 ];
 
 const jsonLd = {
@@ -540,11 +533,16 @@ export default function HomePage() {
           </div>
 
           <div className="card-grid use-case-grid">
-            {useCases.map((item) => (
-              <article key={item} className="use-case-card">
-                {item}
-              </article>
+            {useCaseLibrary.map((item) => (
+              <Link key={item.slug} href={`/use-cases/${item.slug}`} className="use-case-card">
+                {item.title}
+              </Link>
             ))}
+          </div>
+          <div className="use-case-library-link">
+            <Link href="/use-cases" className="button button-secondary">
+              Browse the full use-case library
+            </Link>
           </div>
         </section>
 
