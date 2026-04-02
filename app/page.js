@@ -1,17 +1,33 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+const workflowSteps = [
+  { title: "Capture inbound leads from forms and CRM", icon: "chat" },
+  { title: "Score intent using AI rules and context", icon: "gauge" },
+  { title: "Route qualified leads instantly to the right team", icon: "route" },
+  { title: "Trigger follow-up, summaries, and reporting", icon: "chart" }
+];
+
 const services = [
   {
+    icon: "spark",
     title: "AI Strategy and Scoping",
     text: "Identify the highest-leverage AI opportunities, define the architecture, and turn ambition into a buildable roadmap."
   },
   {
+    icon: "bot",
     title: "Custom AI Development",
     text: "Build copilots, agents, internal tools, and AI-enabled product features tailored to your workflows and data."
   },
   {
+    icon: "shield",
     title: "Production Deployment",
     text: "Ship with observability, human review steps, safeguards, and documentation so your team can run it with confidence."
   },
   {
+    icon: "flow",
     title: "Workflow Automation",
     text: "Connect systems, approvals, and data flows to remove manual work and improve speed across the business."
   }
@@ -75,40 +91,6 @@ const jsonLd = {
   ]
 };
 
-function ForschLogo() {
-  return (
-    <svg
-      width="180"
-      height="36"
-      viewBox="0 0 360 72"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="logo"
-      aria-label="Forsch"
-      role="img"
-    >
-      <path
-        d="M18 21L58 42L18 63"
-        stroke="#b4d455"
-        strokeWidth="8"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-      />
-      <text
-        x="92"
-        y="50"
-        fill="#162027"
-        fontFamily="Georgia, Times New Roman, serif"
-        fontSize="44"
-        fontWeight="700"
-      >
-        forsch
-      </text>
-      <rect x="314" y="54" width="34" height="8" fill="#b4d455" />
-    </svg>
-  );
-}
-
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
@@ -139,11 +121,101 @@ function CheckIcon() {
   );
 }
 
-function MiniIcon({ children }) {
-  return <span className="mini-icon">{children}</span>;
+function MenuIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="menu-icon">
+      <path
+        d="M6 8h12M6 12h12M6 16h12"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="menu-icon">
+      <path
+        d="M7 7l10 10M17 7 7 17"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+}
+
+function ServiceIcon({ type }) {
+  if (type === "spark") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M12 3 14 9l6 3-6 3-2 6-2-6-6-3 6-3 2-6Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === "bot") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M12 4v3M8 7h8a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3Zm2 5h.01M14 12h.01M9 18v2M15 18v2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+
+  if (type === "shield") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M12 3 19 6v5c0 4.5-2.5 7.7-7 10-4.5-2.3-7-5.5-7-10V6l7-3Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+      <path d="M7 7h4v4H7zM13 13h4v4h-4zM14 10l3-3M10 14l-3 3" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function WorkflowIcon({ type }) {
+  if (type === "chat") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M7 7h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-6l-4 3v-3H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+
+  if (type === "gauge") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M5 14a7 7 0 1 1 14 0M12 14l3-3" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+
+  if (type === "route") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+        <path d="M7 7h.01M17 17h.01M7 17h.01M7 7v6a4 4 0 0 0 4 4h6" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+      <path d="M6 18h12M8 15V9M12 15V6M16 15v-3" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+    </svg>
+  );
 }
 
 export default function HomePage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <main className="page-shell">
       <script
@@ -155,9 +227,16 @@ export default function HomePage() {
       <div className="bg-orb orb-two" aria-hidden="true" />
 
       <div className="container">
-        <header className="site-header">
+        <header className={`site-header${isMobileMenuOpen ? " mobile-menu-open" : ""}`}>
           <a href="#top" className="brand" aria-label="Forsch home">
-            <ForschLogo />
+            <Image
+              src="/forsch.svg"
+              alt="Forsch"
+              width={1408}
+              height={768}
+              priority
+              className="logo"
+            />
           </a>
 
           <nav className="desktop-nav" aria-label="Primary">
@@ -170,6 +249,50 @@ export default function HomePage() {
           <a className="button button-primary button-small" href="mailto:hello@forsch.io">
             Get in touch
           </a>
+
+          <a
+            className="mobile-header-cta"
+            href="mailto:hello@forsch.io"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Get in touch
+          </a>
+
+          <button
+            className="mobile-menu-button"
+            type="button"
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation-panel"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+          >
+            {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
+
+          {isMobileMenuOpen ? (
+            <div id="mobile-navigation-panel" className="mobile-menu-panel">
+              <nav className="mobile-nav" aria-label="Mobile">
+                <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>
+                  Services
+                </a>
+                <a href="#process" onClick={() => setIsMobileMenuOpen(false)}>
+                  Process
+                </a>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  Contact
+                </a>
+              </nav>
+
+              <a
+                className="button button-primary mobile-menu-cta"
+                href="mailto:hello@forsch.io?subject=Discovery%20Call"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Book a discovery call
+                <ArrowIcon />
+              </a>
+            </div>
+          ) : null}
         </header>
 
         <section id="top" className="hero-grid">
@@ -210,26 +333,18 @@ export default function HomePage() {
                   <p>Implementation snapshot</p>
                   <h2>Lead handling workflow</h2>
                 </div>
-                <MiniIcon>Flow</MiniIcon>
+                <span className="mini-icon">Flow</span>
               </div>
 
               <div className="workflow-list">
-                <div className="workflow-item">
-                  <MiniIcon>01</MiniIcon>
-                  <span>Capture inbound leads from forms and CRM</span>
-                </div>
-                <div className="workflow-item">
-                  <MiniIcon>02</MiniIcon>
-                  <span>Score intent using AI rules and context</span>
-                </div>
-                <div className="workflow-item">
-                  <MiniIcon>03</MiniIcon>
-                  <span>Route qualified leads instantly to the right team</span>
-                </div>
-                <div className="workflow-item">
-                  <MiniIcon>04</MiniIcon>
-                  <span>Trigger follow-up, summaries, and reporting</span>
-                </div>
+                {workflowSteps.map((step) => (
+                  <div key={step.title} className="workflow-item">
+                    <span className="workflow-badge">
+                      <WorkflowIcon type={step.icon} />
+                    </span>
+                    <span>{step.title}</span>
+                  </div>
+                ))}
               </div>
 
               <div className="code-grid">
@@ -283,7 +398,9 @@ export default function HomePage() {
           <div className="card-grid services-grid">
             {services.map((service) => (
               <article key={service.title} className="info-card">
-                <span className="card-chip">Service</span>
+                <span className="service-badge">
+                  <ServiceIcon type={service.icon} />
+                </span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </article>
