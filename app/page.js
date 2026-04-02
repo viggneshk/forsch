@@ -149,6 +149,21 @@ function CloseIcon() {
   );
 }
 
+function StackIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="service-icon">
+      <path
+        d="M12 5 19 9l-7 4-7-4 7-4Zm0 6 7 4-7 4-7-4 7-4Zm7-2v6M5 9v6"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+}
+
 function ServiceIcon({ type }) {
   if (type === "spark") {
     return (
@@ -333,7 +348,9 @@ export default function HomePage() {
                   <p>Implementation snapshot</p>
                   <h2>Lead handling workflow</h2>
                 </div>
-                <span className="mini-icon">Flow</span>
+                <span className="mini-icon" aria-label="Workflow layers">
+                  <StackIcon />
+                </span>
               </div>
 
               <div className="workflow-list">

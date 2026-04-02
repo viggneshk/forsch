@@ -1,4 +1,16 @@
+import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans"
+});
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-serif"
+});
 
 export const metadata = {
   metadataBase: new URL("https://forsch.io"),
@@ -52,7 +64,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.variable} ${dmSerif.variable}`}>{children}</body>
     </html>
   );
 }
