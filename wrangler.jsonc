@@ -6,6 +6,10 @@
   "compatibility_flags": [
     "nodejs_compat"
   ],
+  "vars": {
+    "SUPABASE_URL": "https://mredfuxiopwvuncjpere.supabase.co",
+    "ADMIN_USERNAME": "admin"
+  },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
