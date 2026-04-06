@@ -66,7 +66,7 @@ export default async function UseCaseDetailPage({ params }) {
           <span>/</span>
           <Link href="/use-cases">Use Cases</Link>
           <span>/</span>
-          <span aria-current="page">{useCase.shortTitle}</span>
+          <span aria-current="page">{useCase.title}</span>
         </nav>
 
         <section className="use-case-hero detail-hero">

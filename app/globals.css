@@ -823,6 +823,10 @@ aside {
   line-height: var(--leading-body);
 }
 
+.detail-card-dark .detail-list li {
+  color: var(--text-on-dark-muted);
+}
+
 .detail-list li::before {
   content: "";
   position: absolute;
