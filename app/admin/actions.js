@@ -76,7 +76,7 @@ export async function loginAdminAction(formData) {
   const username = String(formData.get("username") || "").trim();
   const password = String(formData.get("password") || "");
 
-  if (!validateAdminCredentials(username, password)) {
+  if (!(await validateAdminCredentials(username, password))) {
     redirect("/admin/login?error=invalid");
   }
 

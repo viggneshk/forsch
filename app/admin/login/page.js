@@ -16,7 +16,7 @@ export default async function AdminLoginPage({ searchParams }) {
     redirect("/admin");
   }
 
-  const configured = isAdminConfigured();
+  const configured = await isAdminConfigured();
   const error = searchParams?.error;
 
   return (
