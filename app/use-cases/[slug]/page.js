@@ -1,36 +1,26 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getUseCaseBySlug, useCaseLibrary } from "../data";
+import { getContentItem } from "../../../lib/content-store";
 
-export function generateStaticParams() {
-  return useCaseLibrary.map((item) => ({ slug: item.slug }));
-}
-
-export function generateMetadata({ params }) {
-  const useCase = getUseCaseBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const useCase = await getContentItem("use-case", slug);
 
   if (!useCase) {
     return {};
   }
 
-  const canonicalUrl = `https://forsch.io/use-cases/${useCase.slug}`;
-
   return {
-    title: useCase.title,
-    description: useCase.summary,
+    title: useCase.seoTitle || useCase.title,
+    description: useCase.metaDescription || useCase.summary,
     alternates: {
       canonical: `/use-cases/${useCase.slug}`
     },
     openGraph: {
-      title: `${useCase.title} | Forsch`,
-      description: useCase.summary,
-      url: canonicalUrl,
+      title: `${useCase.seoTitle || useCase.title} | Forsch`,
+      description: useCase.metaDescription || useCase.summary,
+      url: `https://forsch.io/use-cases/${useCase.slug}`,
       type: "article"
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${useCase.title} | Forsch`,
-      description: useCase.summary
     }
   };
 }
@@ -45,8 +35,9 @@ function SectionList({ items }) {
   );
 }
 
-export default function UseCaseDetailPage({ params }) {
-  const useCase = getUseCaseBySlug(params.slug);
+export default async function UseCaseDetailPage({ params }) {
+  const { slug } = await params;
+  const useCase = await getContentItem("use-case", slug);
 
   if (!useCase) {
     notFound();
@@ -56,33 +47,10 @@ export default function UseCaseDetailPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://forsch.io"
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Use Cases",
-        item: "https://forsch.io/use-cases"
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: useCase.title,
-        item: `https://forsch.io/use-cases/${useCase.slug}`
-      }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://forsch.io" },
+      { "@type": "ListItem", position: 2, name: "Use Cases", item: "https://forsch.io/use-cases" },
+      { "@type": "ListItem", position: 3, name: useCase.title, item: `https://forsch.io/use-cases/${useCase.slug}` }
     ]
-  };
-
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Forsch",
-    url: "https://forsch.io",
-    email: "hello@forsch.io"
   };
 
   return (
@@ -90,10 +58,6 @@ export default function UseCaseDetailPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
 
       <div className="container use-case-container">
@@ -117,52 +81,45 @@ export default function UseCaseDetailPage({ params }) {
             <h2>What breaks down today</h2>
             <p>{useCase.problem}</p>
           </section>
-
           <section className="detail-card">
             <p className="section-tag">Who it is for</p>
             <h2>The teams that benefit most</h2>
-            <SectionList items={useCase.audience} />
+            <SectionList items={useCase.audience || []} />
           </section>
-
           <section className="detail-card">
             <p className="section-tag">What the AI system does</p>
             <h2>Inputs, workflow, approvals, and outputs</h2>
-            <SectionList items={useCase.whatItDoes} />
+            <SectionList items={useCase.whatItDoes || []} />
           </section>
-
           <section className="detail-card">
             <p className="section-tag">How Forsch implements it</p>
             <h2>From discovery to monitored deployment</h2>
-            <SectionList items={useCase.implementation} />
+            <SectionList items={useCase.implementation || []} />
           </section>
-
           <section className="detail-card detail-card-dark">
             <p className="section-tag">Example workflow</p>
             <h2>How the system moves through the process</h2>
-            <SectionList items={useCase.workflow} />
+            <SectionList items={useCase.workflow || []} />
           </section>
-
           <section className="detail-card">
             <p className="section-tag">Expected outcomes</p>
             <h2>What teams should expect to improve</h2>
-            <SectionList items={useCase.outcomes} />
+            <SectionList items={useCase.outcomes || []} />
           </section>
-
           <section className="detail-card">
             <p className="section-tag">Integrations</p>
             <h2>Systems this workflow commonly connects to</h2>
             <div className="tag-list">
-              {useCase.integrations.map((integration) => (
+              {(useCase.integrations || []).map((integration) => (
                 <span key={integration}>{integration}</span>
               ))}
             </div>
           </section>
-
           <section className="detail-card">
             <p className="section-tag">FAQ</p>
             <h2>Questions teams usually ask</h2>
             <div className="faq-list">
-              {useCase.faqs.map((faq) => (
+              {(useCase.faqs || []).map((faq) => (
                 <article key={faq.question} className="faq-item">
                   <h3>{faq.question}</h3>
                   <p>{faq.answer}</p>
@@ -178,8 +135,7 @@ export default function UseCaseDetailPage({ params }) {
             <h2>{useCase.cta}</h2>
             <p>
               If this matches the kind of workflow you want to modernize, Forsch can
-              map the implementation, integration points, review controls, and rollout
-              plan with you.
+              map the implementation, integration points, review controls, and rollout plan with you.
             </p>
             <a className="button button-primary" href="mailto:hello@forsch.io?subject=Use%20Case%20Inquiry">
               Book a discovery call
