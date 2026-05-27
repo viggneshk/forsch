@@ -1,6 +1,536 @@
 {
   "useCases": [
     {
+      "id": "dental-ai-automation",
+      "type": "use-case",
+      "slug": "dental-ai-automation",
+      "status": "published",
+      "title": "Dental AI Automation for Missed Calls and Treatment Follow-Up",
+      "summary": "Automate missed-call recovery, insurance pre-checks, no-show recovery, recare reminders, and treatment-plan follow-up while keeping staff approval where it matters.",
+      "seoTitle": "Dental AI Automation for Missed Calls and Treatment Follow-Up",
+      "metaDescription": "Automate missed-call recovery, insurance pre-checks, no-show recovery, recare reminders, and treatment-plan follow-up while keeping staff approval where it matters.",
+      "primaryKeyword": "dental AI automation",
+      "secondaryKeywords": [
+        "dental automation",
+        "dental missed call automation",
+        "dental treatment plan follow-up"
+      ],
+      "focusKeyword": "dental AI automation",
+      "searchIntent": "commercial investigation",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-05-30-ai-automation-for-dental",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 4,
+      "reviewStatus": "draft",
+      "canonicalPath": "/use-cases/dental-ai-automation",
+      "relatedLinks": [
+        "/use-cases/patient-follow-up-automation",
+        "/articles/what-makes-ai-implementation-fail"
+      ],
+      "cta": "Talk through your dental follow-up workflow",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "dental-ai-automation-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about dental AI automation.",
+          "prompt": "Professional workflow diagram for Forsch content Dental AI Automation for Missed Calls and Treatment Follow-Up. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "dental-ai-automation-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about dental AI automation.",
+          "prompt": "Landscape Open Graph image for Forsch piece Dental AI Automation for Missed Calls and Treatment Follow-Up, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "dental-ai-automation-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about dental AI automation.",
+            "prompt": "Forsch workflow map for Dental AI Automation for Missed Calls and Treatment Follow-Up, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "dental-ai-automation-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about dental AI automation.",
+            "prompt": "Forsch dashboard-style implementation visual for Dental AI Automation for Missed Calls and Treatment Follow-Up, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/dental-ai-automation-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about dental AI automation.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about dental AI automation.",
+      "socialImage": "/images/content/dental-ai-automation-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about dental AI automation.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about dental AI automation.",
+          "brief": "Forsch workflow map for Dental AI Automation for Missed Calls and Treatment Follow-Up, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/dental-ai-automation-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about dental AI automation.",
+          "brief": "Forsch dashboard-style implementation visual for Dental AI Automation for Missed Calls and Treatment Follow-Up, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/dental-ai-automation-dashboard-forsch.png"
+        }
+      ],
+      "shortTitle": "Dental automation",
+      "audience": [
+        "Dental practice owners",
+        "Office managers",
+        "Front-desk teams",
+        "Treatment coordinators"
+      ],
+      "problem": "Dental practices lose revenue in the gaps between missed calls, delayed insurance checks, no-show recovery, recare reminders, and treatment plans that never get a second follow-up.",
+      "whatItDoes": [
+        "Captures missed calls and web inquiries for fast follow-up.",
+        "Prepares insurance and scheduling context before staff intervention.",
+        "Supports no-show recovery, recare reminders, and treatment-plan follow-up.",
+        "Routes sensitive or ambiguous patient situations to the team with context."
+      ],
+      "implementation": [
+        "Map phone, scheduling, insurance, recare, and treatment-plan handoffs.",
+        "Connect practice-management context, forms, email, SMS, and internal task queues where appropriate.",
+        "Keep human approval for clinical, financial, and sensitive patient communication.",
+        "Measure response time, recovered appointments, recare completion, and treatment follow-up conversion."
+      ],
+      "workflow": [
+        "A patient misses a call, no-shows, needs recare, or has an open treatment plan.",
+        "The system identifies the right follow-up path and gathers available context.",
+        "Routine reminders and staff-ready drafts are prepared where safe.",
+        "The team handles exceptions with cleaner context and less manual chasing."
+      ],
+      "outcomes": [
+        "Faster missed-call recovery",
+        "Better recare and no-show follow-up",
+        "More consistent treatment-plan reminders",
+        "Less repetitive front-desk work"
+      ],
+      "integrations": [
+        "Practice management system",
+        "Scheduling",
+        "Phone system",
+        "Forms",
+        "Email",
+        "SMS",
+        "Slack"
+      ],
+      "faqs": [
+        {
+          "question": "Does dental AI automation send clinical advice?",
+          "answer": "No. Clinical judgment and sensitive patient communication should stay staff-owned, with automation focused on workflow coordination and follow-up coverage."
+        },
+        {
+          "question": "Where should a dental office begin?",
+          "answer": "Start with missed-call recovery, no-show recovery, recare reminders, or treatment-plan follow-up because those workflows have clear owners and measurable leakage."
+        }
+      ]
+    },
+    {
+      "id": "pet-boarding-ai-automation",
+      "type": "use-case",
+      "slug": "pet-boarding-ai-automation",
+      "status": "published",
+      "title": "Pet Boarding AI Automation for Booking Triage",
+      "summary": "Automate booking triage around inquiry details, vaccine records, capacity checks, special-care exceptions, owner updates, and repeat-stay follow-up.",
+      "seoTitle": "Pet Boarding AI Automation for Booking Triage",
+      "metaDescription": "Automate booking triage around inquiry details, vaccine records, capacity checks, special-care exceptions, owner updates, and repeat-stay follow-up.",
+      "primaryKeyword": "pet boarding AI automation",
+      "secondaryKeywords": [
+        "pet boarding automation",
+        "kennel booking automation",
+        "pet care booking triage"
+      ],
+      "focusKeyword": "pet boarding AI automation",
+      "searchIntent": "commercial investigation",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-05-29-ai-automation-for-pet-boarding",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 3,
+      "reviewStatus": "draft",
+      "canonicalPath": "/use-cases/pet-boarding-ai-automation",
+      "relatedLinks": [
+        "/use-cases/workflow-automation-for-ops",
+        "/articles/chatbot-is-not-the-automation"
+      ],
+      "cta": "Talk through your pet boarding booking workflow",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "pet-boarding-ai-automation-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about pet boarding AI automation.",
+          "prompt": "Professional workflow diagram for Forsch content Pet Boarding AI Automation for Booking Triage. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "pet-boarding-ai-automation-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about pet boarding AI automation.",
+          "prompt": "Landscape Open Graph image for Forsch piece Pet Boarding AI Automation for Booking Triage, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "pet-boarding-ai-automation-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about pet boarding AI automation.",
+            "prompt": "Forsch workflow map for Pet Boarding AI Automation for Booking Triage, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "pet-boarding-ai-automation-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about pet boarding AI automation.",
+            "prompt": "Forsch dashboard-style implementation visual for Pet Boarding AI Automation for Booking Triage, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/pet-boarding-ai-automation-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about pet boarding AI automation.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about pet boarding AI automation.",
+      "socialImage": "/images/content/pet-boarding-ai-automation-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about pet boarding AI automation.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about pet boarding AI automation.",
+          "brief": "Forsch workflow map for Pet Boarding AI Automation for Booking Triage, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/pet-boarding-ai-automation-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about pet boarding AI automation.",
+          "brief": "Forsch dashboard-style implementation visual for Pet Boarding AI Automation for Booking Triage, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/pet-boarding-ai-automation-dashboard-forsch.png"
+        }
+      ],
+      "shortTitle": "Pet boarding automation",
+      "audience": [
+        "Pet boarding owners",
+        "Kennel operators",
+        "Daycare managers",
+        "Front-desk teams"
+      ],
+      "problem": "Pet boarding teams lose time and trust when booking inquiries, vaccine records, capacity questions, and special-care notes are scattered across calls, forms, inboxes, and staff memory.",
+      "whatItDoes": [
+        "Collects booking intent, dates, pet details, vaccine status, and care requirements.",
+        "Checks capacity and policy context before a staff member has to chase details.",
+        "Flags special-care, medication, temperament, or missing-record exceptions for human review.",
+        "Supports owner updates and repeat-stay follow-up without replacing care judgment."
+      ],
+      "implementation": [
+        "Map inquiry sources, boarding policies, vaccine requirements, capacity data, and escalation rules.",
+        "Connect booking software, forms, email, SMS, and internal task channels where available.",
+        "Keep staff approval for special-care decisions and ambiguous pet-safety situations.",
+        "Measure time-to-booking response, incomplete inquiry rate, missing-record follow-up, and exception volume."
+      ],
+      "workflow": [
+        "A new inquiry arrives from a call, form, email, or message.",
+        "The system collects booking and pet details and checks policy requirements.",
+        "Routine follow-up runs automatically, while exceptions are routed to staff.",
+        "The team receives a clean booking handoff instead of scattered notes."
+      ],
+      "outcomes": [
+        "Faster booking triage",
+        "Fewer incomplete inquiries",
+        "Cleaner vaccine and policy follow-up",
+        "More reliable staff handoffs for exceptions"
+      ],
+      "integrations": [
+        "Booking software",
+        "Forms",
+        "Email",
+        "SMS",
+        "Phone system",
+        "Slack"
+      ],
+      "faqs": [
+        {
+          "question": "Should AI make pet care decisions?",
+          "answer": "No. The automation should organize booking context and route exceptions, while staff keep judgment over safety, care, and special cases."
+        },
+        {
+          "question": "What is the first workflow to automate for pet boarding?",
+          "answer": "Booking triage is usually the safest first workflow because it reduces coordination load without touching direct care judgment."
+        }
+      ]
+    },
+    {
+      "id": "car-wash-ai-automation",
+      "type": "use-case",
+      "slug": "car-wash-ai-automation",
+      "status": "published",
+      "title": "Car Wash AI Automation for Memberships and Service Recovery",
+      "summary": "Use AI automation to spot membership churn risk, recover failed payments, triage reviews, answer plan questions, and route manager exceptions.",
+      "seoTitle": "Car Wash AI Automation for Memberships and Service Recovery",
+      "metaDescription": "Use AI automation to spot membership churn risk, recover failed payments, triage reviews, answer plan questions, and route manager exceptions.",
+      "primaryKeyword": "car wash AI automation",
+      "secondaryKeywords": [
+        "car wash automation",
+        "car wash membership automation",
+        "car wash review recovery"
+      ],
+      "focusKeyword": "car wash AI automation",
+      "searchIntent": "commercial investigation",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-05-28-ai-automation-for-car-wash",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 2,
+      "reviewStatus": "draft",
+      "canonicalPath": "/use-cases/car-wash-ai-automation",
+      "relatedLinks": [
+        "/use-cases/workflow-automation-for-ops",
+        "/articles/what-makes-ai-implementation-fail"
+      ],
+      "cta": "Talk through your car wash membership workflow",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "car-wash-ai-automation-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about car wash AI automation.",
+          "prompt": "Professional workflow diagram for Forsch content Car Wash AI Automation for Memberships and Service Recovery. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "car-wash-ai-automation-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about car wash AI automation.",
+          "prompt": "Landscape Open Graph image for Forsch piece Car Wash AI Automation for Memberships and Service Recovery, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "car-wash-ai-automation-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about car wash AI automation.",
+            "prompt": "Forsch workflow map for Car Wash AI Automation for Memberships and Service Recovery, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "car-wash-ai-automation-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about car wash AI automation.",
+            "prompt": "Forsch dashboard-style implementation visual for Car Wash AI Automation for Memberships and Service Recovery, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/car-wash-ai-automation-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about car wash AI automation.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about car wash AI automation.",
+      "socialImage": "/images/content/car-wash-ai-automation-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about car wash AI automation.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about car wash AI automation.",
+          "brief": "Forsch workflow map for Car Wash AI Automation for Memberships and Service Recovery, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/car-wash-ai-automation-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about car wash AI automation.",
+          "brief": "Forsch dashboard-style implementation visual for Car Wash AI Automation for Memberships and Service Recovery, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/car-wash-ai-automation-dashboard-forsch.png"
+        }
+      ],
+      "shortTitle": "Car wash automation",
+      "audience": [
+        "Car wash owners",
+        "Multi-site operators",
+        "Membership managers",
+        "Operations teams"
+      ],
+      "problem": "Car wash operators often leak margin through membership churn, failed autopay, unanswered plan questions, and reviews that sit too long before a manager can respond.",
+      "whatItDoes": [
+        "Flags membership churn and failed-payment recovery opportunities.",
+        "Routes plan, pricing, and service questions to consistent answers or the right staff member.",
+        "Triage negative reviews and customer issues with context for manager response.",
+        "Supports weather or event-based messaging without turning the workflow into a generic chatbot."
+      ],
+      "implementation": [
+        "Map membership events, POS fields, review sources, and manager escalation rules.",
+        "Connect POS, CRM, review platforms, email, SMS, and internal alerts where appropriate.",
+        "Define human approval for refunds, escalations, and sensitive customer responses.",
+        "Measure recovered payments, churn saves, review response time, and escalations resolved."
+      ],
+      "workflow": [
+        "A membership, payment, review, or plan-question event enters the workflow.",
+        "The system classifies the issue and checks the relevant account or location context.",
+        "Routine responses and reminders are prepared or sent where safe.",
+        "Managers receive only the issues that need judgment, with the history attached."
+      ],
+      "outcomes": [
+        "Higher membership retention visibility",
+        "Faster failed-payment recovery",
+        "Cleaner review triage",
+        "Less manager time spent reconstructing context"
+      ],
+      "integrations": [
+        "POS",
+        "Membership platform",
+        "CRM",
+        "Review platforms",
+        "SMS",
+        "Email",
+        "Slack"
+      ],
+      "faqs": [
+        {
+          "question": "Where should a car wash start with AI automation?",
+          "answer": "Start with a workflow tied to revenue leakage, such as membership churn, failed payments, review recovery, or plan questions."
+        },
+        {
+          "question": "Can the workflow stay manager-approved?",
+          "answer": "Yes. Refunds, angry reviews, and unusual account situations should keep a human approval path."
+        }
+      ]
+    },
+    {
+      "id": "self-storage-ai-automation",
+      "type": "use-case",
+      "slug": "self-storage-ai-automation",
+      "status": "published",
+      "title": "Self Storage AI Automation for Missed Calls and Reservations",
+      "summary": "Capture missed calls, answer unit questions, qualify move-in intent, and route reservation-ready leads without adding front-desk load.",
+      "seoTitle": "Self Storage AI Automation for Missed Calls and Reservations",
+      "metaDescription": "Capture missed calls, answer unit questions, qualify move-in intent, and route reservation-ready leads without adding front-desk load.",
+      "primaryKeyword": "self storage AI automation",
+      "secondaryKeywords": [
+        "self storage automation",
+        "storage facility missed call automation",
+        "AI reservation workflow"
+      ],
+      "focusKeyword": "self storage AI automation",
+      "searchIntent": "commercial investigation",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-05-27-ai-automation-for-self-storage",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 1,
+      "reviewStatus": "draft",
+      "canonicalPath": "/use-cases/self-storage-ai-automation",
+      "relatedLinks": [
+        "/use-cases/workflow-automation-for-ops",
+        "/articles/chatbot-is-not-the-automation"
+      ],
+      "cta": "Talk through your self storage inquiry workflow",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "self-storage-ai-automation-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about self storage AI automation.",
+          "prompt": "Professional workflow diagram for Forsch content Self Storage AI Automation for Missed Calls and Reservations. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "self-storage-ai-automation-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about self storage AI automation.",
+          "prompt": "Landscape Open Graph image for Forsch piece Self Storage AI Automation for Missed Calls and Reservations, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "self-storage-ai-automation-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about self storage AI automation.",
+            "prompt": "Forsch workflow map for Self Storage AI Automation for Missed Calls and Reservations, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "self-storage-ai-automation-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about self storage AI automation.",
+            "prompt": "Forsch dashboard-style implementation visual for Self Storage AI Automation for Missed Calls and Reservations, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/self-storage-ai-automation-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about self storage AI automation.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about self storage AI automation.",
+      "socialImage": "/images/content/self-storage-ai-automation-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about self storage AI automation.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about self storage AI automation.",
+          "brief": "Forsch workflow map for Self Storage AI Automation for Missed Calls and Reservations, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/self-storage-ai-automation-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about self storage AI automation.",
+          "brief": "Forsch dashboard-style implementation visual for Self Storage AI Automation for Missed Calls and Reservations, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/self-storage-ai-automation-dashboard-forsch.png"
+        }
+      ],
+      "shortTitle": "Self storage automation",
+      "audience": [
+        "Self storage owners",
+        "Facility managers",
+        "Regional operators",
+        "Operations teams"
+      ],
+      "problem": "Storage facilities lose high-intent demand when missed calls, web forms, unit questions, and move-in timing are handled slowly or inconsistently.",
+      "whatItDoes": [
+        "Captures missed calls and web inquiries after hours or during busy desk periods.",
+        "Collects move-in timing, unit size, location preference, and contact details.",
+        "Answers availability and policy questions from approved facility data.",
+        "Routes reservation-ready leads to the right manager with clean context."
+      ],
+      "implementation": [
+        "Map inquiry channels, unit data sources, reservation rules, and escalation paths.",
+        "Connect phone, web form, website, CRM, and property-management context where available.",
+        "Keep human review for exceptions, discounts, disputes, and ambiguous reservation requests.",
+        "Measure missed-call recovery, lead-to-conversation time, reservation-ready leads routed, and move-in conversion by source."
+      ],
+      "workflow": [
+        "A prospect calls after hours or submits a web inquiry.",
+        "The AI intake layer collects the details needed to judge move-in intent.",
+        "Availability and qualification checks run against approved facility context.",
+        "Reservation-ready leads are handed to a manager with the next action already clear."
+      ],
+      "outcomes": [
+        "More recovered missed-call demand",
+        "Faster response to high-intent move-in inquiries",
+        "Cleaner reservation handoffs",
+        "Less repetitive front-desk qualification work"
+      ],
+      "integrations": [
+        "Phone system",
+        "Website forms",
+        "CRM",
+        "Property management system",
+        "Email",
+        "Slack"
+      ],
+      "faqs": [
+        {
+          "question": "Does self storage AI automation replace the facility manager?",
+          "answer": "No. The practical goal is to recover demand, qualify inquiries, and hand managers cleaner context so they can focus on exceptions and close-ready leads."
+        },
+        {
+          "question": "Can the workflow handle unit availability questions safely?",
+          "answer": "Yes, if the workflow is connected to approved availability or pricing data and uses clear fallback rules when context is stale or missing."
+        }
+      ]
+    },
+    {
       "id": "embedded-ai-features",
       "type": "use-case",
       "slug": "embedded-ai-features",
@@ -389,6 +919,201 @@
     }
   ],
   "articles": [
+    {
+      "id": "chatbot-is-not-the-automation",
+      "type": "article",
+      "slug": "chatbot-is-not-the-automation",
+      "status": "published",
+      "title": "The Chatbot Is Not the Automation",
+      "summary": "Why production AI automation depends on system connections, handoffs, controls, and KPIs rather than a standalone chat interface.",
+      "seoTitle": "The Chatbot Is Not the Automation",
+      "metaDescription": "Why production AI automation depends on system connections, handoffs, controls, and KPIs rather than a standalone chat interface.",
+      "primaryKeyword": "AI automation integration",
+      "secondaryKeywords": [
+        "chatbot automation",
+        "AI workflow integration",
+        "production AI automation"
+      ],
+      "focusKeyword": "AI automation integration",
+      "searchIntent": "informational",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-01-ai-automation-implementation-reality",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 6,
+      "reviewStatus": "draft",
+      "canonicalPath": "/articles/chatbot-is-not-the-automation",
+      "relatedLinks": [
+        "/articles/what-makes-ai-implementation-fail",
+        "/use-cases/workflow-automation-for-ops",
+        "/use-cases/self-storage-ai-automation"
+      ],
+      "cta": "Talk through the system connections your AI workflow needs",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "chatbot-is-not-the-automation-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about AI automation integration.",
+          "prompt": "Professional workflow diagram for Forsch content The Chatbot Is Not the Automation. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "chatbot-is-not-the-automation-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about AI automation integration.",
+          "prompt": "Landscape Open Graph image for Forsch piece The Chatbot Is Not the Automation, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "chatbot-is-not-the-automation-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about AI automation integration.",
+            "prompt": "Forsch workflow map for The Chatbot Is Not the Automation, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "chatbot-is-not-the-automation-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about AI automation integration.",
+            "prompt": "Forsch dashboard-style implementation visual for The Chatbot Is Not the Automation, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/chatbot-is-not-the-automation-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about AI automation integration.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about AI automation integration.",
+      "socialImage": "/images/content/chatbot-is-not-the-automation-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about AI automation integration.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about AI automation integration.",
+          "brief": "Forsch workflow map for The Chatbot Is Not the Automation, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/chatbot-is-not-the-automation-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about AI automation integration.",
+          "brief": "Forsch dashboard-style implementation visual for The Chatbot Is Not the Automation, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/chatbot-is-not-the-automation-dashboard-forsch.png"
+        }
+      ],
+      "category": "Implementation",
+      "heroLabel": "Article",
+      "body": [
+        "A chatbot can make an AI demo feel complete, but the actual automation usually lives behind the chat surface.",
+        "If the workflow does not connect to the CRM, scheduler, POS, property-management system, practice-management system, or internal queue, the real work still happens manually.",
+        "That is why many AI projects stall after the first impressive interaction. The model answers a question, but it does not route the lead, update the record, trigger the next step, or show whether the workflow improved.",
+        "Production automation needs approved inputs, clear write boundaries, human review rules, exception handling, and measurement. The chat interface is only one possible front door.",
+        "The better question is not whether the bot sounds smart. It is whether the business process moves faster, cleaner, and with fewer dropped handoffs."
+      ],
+      "takeaways": [
+        "A standalone chatbot is not the same thing as workflow automation.",
+        "The system of record decides whether the automation can actually move work forward.",
+        "Useful AI implementation needs handoffs, controls, and KPIs from the start."
+      ]
+    },
+    {
+      "id": "local-service-ai-automation-pattern",
+      "type": "article",
+      "slug": "local-service-ai-automation-pattern",
+      "status": "published",
+      "title": "The Local Service AI Automation Pattern",
+      "summary": "A practical implementation pattern for local service AI automation across intake, qualification, system lookup, follow-up, human escalation, and measurement.",
+      "seoTitle": "The Local Service AI Automation Pattern",
+      "metaDescription": "A practical implementation pattern for local service AI automation across intake, qualification, system lookup, follow-up, human escalation, and measurement.",
+      "primaryKeyword": "local service AI automation",
+      "secondaryKeywords": [
+        "AI automation for local service businesses",
+        "workflow automation for local businesses",
+        "AI intake automation"
+      ],
+      "focusKeyword": "local service AI automation",
+      "searchIntent": "informational",
+      "sourcePostUrl": "",
+      "sourcePostId": "aiagency-weekly-pack-2026-05-31-cross-domain-local-service-ai-automation-pattern",
+      "sourcePlatform": "weekly_pack_fallback",
+      "sourceViews": 0,
+      "rankByViews": 0,
+      "socialSlot": 5,
+      "reviewStatus": "draft",
+      "canonicalPath": "/articles/local-service-ai-automation-pattern",
+      "relatedLinks": [
+        "/use-cases/self-storage-ai-automation",
+        "/use-cases/car-wash-ai-automation",
+        "/use-cases/pet-boarding-ai-automation",
+        "/use-cases/dental-ai-automation"
+      ],
+      "cta": "Talk through the local service workflow worth automating first",
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
+      "action": "create_new_page",
+      "existingContent": {},
+      "imagePlan": {
+        "heroImage": {
+          "filename": "local-service-ai-automation-pattern-workflow-forsch.png",
+          "altText": "Workflow hero visual for Forsch content about local service AI automation.",
+          "prompt": "Professional workflow diagram for Forsch content The Local Service AI Automation Pattern. Show practical automation flow, dashboard-style modules, and clean business process visuals. Use generic interface blocks, no brand marks, and no customer-specific proof cues.",
+          "placement": "article_header"
+        },
+        "openGraphImage": {
+          "filename": "local-service-ai-automation-pattern-og-forsch.png",
+          "altText": "Open Graph image for Forsch content about local service AI automation.",
+          "prompt": "Landscape Open Graph image for Forsch piece The Local Service AI Automation Pattern, clean workflow or dashboard motif, implementation-first visual with generic, non-client-specific UI motifs."
+        },
+        "inlineImages": [
+          {
+            "filename": "local-service-ai-automation-pattern-flow-map-forsch.png",
+            "altText": "Workflow map supporting the Forsch piece about local service AI automation.",
+            "prompt": "Forsch workflow map for The Local Service AI Automation Pattern, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+            "placementAfterHeading": "Quick answer"
+          },
+          {
+            "filename": "local-service-ai-automation-pattern-dashboard-forsch.png",
+            "altText": "Dashboard-style visual supporting the Forsch piece about local service AI automation.",
+            "prompt": "Forsch dashboard-style implementation visual for The Local Service AI Automation Pattern, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+            "placementAfterHeading": "What to know next"
+          }
+        ]
+      },
+      "heroImage": "/images/content/local-service-ai-automation-pattern-workflow-forsch.png",
+      "heroImageAlt": "Workflow hero visual for Forsch content about local service AI automation.",
+      "heroImageCaption": "Workflow hero visual for Forsch content about local service AI automation.",
+      "socialImage": "/images/content/local-service-ai-automation-pattern-og-forsch.png",
+      "socialImageAlt": "Open Graph image for Forsch content about local service AI automation.",
+      "inlineImageSuggestions": [
+        {
+          "placement": "after-section:quick-answer",
+          "alt": "Workflow map supporting the Forsch piece about local service AI automation.",
+          "brief": "Forsch workflow map for The Local Service AI Automation Pattern, practical process stages, operational clarity, clean business illustration with generic systems and no client-specific data.",
+          "src": "/images/content/local-service-ai-automation-pattern-flow-map-forsch.png"
+        },
+        {
+          "placement": "after-section:what-to-know-next",
+          "alt": "Dashboard-style visual supporting the Forsch piece about local service AI automation.",
+          "brief": "Forsch dashboard-style implementation visual for The Local Service AI Automation Pattern, realistic but generic interface blocks, generic interface blocks, no customer logos, and no proof-style callouts.",
+          "src": "/images/content/local-service-ai-automation-pattern-dashboard-forsch.png"
+        }
+      ],
+      "category": "Implementation",
+      "heroLabel": "Article",
+      "body": [
+        "Self storage, car wash, pet boarding, and dental look different from the outside, but the first useful AI workflow often has the same structure underneath.",
+        "The pattern starts with intake. A call, form, message, review, or account event enters the business before the team has enough context to act quickly.",
+        "Then comes qualification and lookup. The system needs to know intent, urgency, customer status, availability, policy, and whether the request is safe to handle automatically.",
+        "The workflow becomes valuable when it turns that context into follow-up, a clean handoff, or a manager-ready exception instead of leaving staff to reconstruct the situation manually.",
+        "The implementation work is not just prompt writing. It is deciding the owner, data sources, escalation rules, timing, and KPIs that make the automation accountable."
+      ],
+      "takeaways": [
+        "Most local-service AI automation starts with the same intake-to-handoff pattern.",
+        "System lookup and human escalation matter more than a generic chat interface.",
+        "The first workflow should have a clear owner and a measurable leakage point."
+      ]
+    },
     {
       "id": "what-makes-ai-implementation-fail",
       "type": "article",
