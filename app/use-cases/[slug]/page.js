@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getContentItem } from "../../../lib/content-store";
+import { getContentCollection, getContentItem } from "../../../lib/content-store";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -23,6 +23,14 @@ export async function generateMetadata({ params }) {
       type: "article"
     }
   };
+}
+
+export async function generateStaticParams() {
+  const useCases = await getContentCollection("use-case");
+
+  return useCases.map((item) => ({
+    slug: item.slug
+  }));
 }
 
 function SectionList({ items }) {
