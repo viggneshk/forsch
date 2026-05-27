@@ -1,4 +1,5 @@
 {
+  "schemaVersion": 2,
   "useCases": [
     {
       "id": "dental-ai-automation",
@@ -534,10 +535,19 @@
       "id": "embedded-ai-features",
       "type": "use-case",
       "slug": "embedded-ai-features",
+      "status": "published",
       "title": "Embedded AI Features for Product Teams",
       "summary": "Ship AI-powered product experiences that are useful, monitored, and grounded in the reality of production software.",
       "seoTitle": "Embedded AI Features for Product Teams",
       "metaDescription": "Learn how Forsch helps product teams ship embedded AI features with grounded outputs, observability, and production-ready UX.",
+      "focusKeyword": "embedded AI features",
+      "keywords": [
+        "embedded AI features",
+        "AI product features",
+        "production AI UX",
+        "custom AI product development"
+      ],
+      "updatedAt": "2026-04-12T00:00:00.000Z",
       "cta": "Talk through your product AI feature",
       "shortTitle": "Embedded AI features",
       "audience": [
@@ -593,11 +603,20 @@
       "id": "ai-lead-qualification",
       "type": "use-case",
       "slug": "ai-lead-qualification",
+      "status": "published",
       "title": "AI Lead Qualification for B2B Startups",
       "shortTitle": "AI lead qualification",
       "summary": "Capture, score, route, and follow up on inbound leads faster so revenue teams respond while intent is still high.",
       "seoTitle": "AI Lead Qualification for B2B Startups",
       "metaDescription": "Learn how Forsch implements AI lead qualification workflows for B2B startups, including routing, scoring, CRM integration, and response-time improvements.",
+      "focusKeyword": "AI lead qualification",
+      "keywords": [
+        "AI lead qualification",
+        "B2B lead routing automation",
+        "AI sales workflow",
+        "RevOps automation"
+      ],
+      "updatedAt": "2026-04-12T00:00:00.000Z",
       "audience": [
         "Founders",
         "Revenue leaders",
@@ -654,11 +673,20 @@
       "id": "customer-support-copilot",
       "type": "use-case",
       "slug": "customer-support-copilot",
+      "status": "published",
       "title": "Customer Support Copilot for SaaS Teams",
       "shortTitle": "Customer support copilot",
       "summary": "Help support teams resolve tickets faster with AI-assisted answers, internal context, and safe escalation paths.",
       "seoTitle": "Customer Support Copilot for SaaS Teams",
       "metaDescription": "See how Forsch builds support copilots for SaaS teams using internal docs, ticket history, and escalation logic to improve response quality.",
+      "focusKeyword": "customer support copilot",
+      "keywords": [
+        "customer support copilot",
+        "AI support assistant",
+        "support workflow automation",
+        "SaaS support AI"
+      ],
+      "updatedAt": "2026-04-13T00:00:00.000Z",
       "audience": [
         "Support leads",
         "Customer experience teams",
@@ -714,11 +742,20 @@
       "id": "internal-knowledge-assistant",
       "type": "use-case",
       "slug": "internal-knowledge-assistant",
+      "status": "published",
       "title": "Internal Knowledge Assistant for Ops Teams",
       "shortTitle": "Internal knowledge assistant",
       "summary": "Give teams one reliable place to ask operational questions and retrieve trusted answers from internal systems and documentation.",
       "seoTitle": "Internal Knowledge Assistant for Ops Teams",
       "metaDescription": "Explore how Forsch implements internal knowledge assistants for ops teams using documentation, permissions, and source-aware answers.",
+      "focusKeyword": "internal knowledge assistant",
+      "keywords": [
+        "internal knowledge assistant",
+        "AI knowledge base",
+        "ops documentation assistant",
+        "enterprise search assistant"
+      ],
+      "updatedAt": "2026-04-13T00:00:00.000Z",
       "audience": [
         "Operations teams",
         "People teams",
@@ -774,11 +811,20 @@
       "id": "reporting-and-analytics-automation",
       "type": "use-case",
       "slug": "reporting-and-analytics-automation",
+      "status": "published",
       "title": "Reporting and Analytics Automation for Growing Teams",
       "shortTitle": "Reporting and analytics automation",
       "summary": "Automate repetitive reporting workflows so teams spend less time assembling updates and more time acting on them.",
       "seoTitle": "Reporting and Analytics Automation for Growing Teams",
       "metaDescription": "See how Forsch automates reporting and analytics workflows across dashboards, summaries, and recurring stakeholder updates.",
+      "focusKeyword": "reporting and analytics automation",
+      "keywords": [
+        "reporting automation",
+        "analytics automation",
+        "AI reporting workflows",
+        "operations reporting automation"
+      ],
+      "updatedAt": "2026-04-14T00:00:00.000Z",
       "audience": [
         "Operations leaders",
         "Finance teams",
@@ -835,11 +881,20 @@
       "id": "workflow-automation-for-ops",
       "type": "use-case",
       "slug": "workflow-automation-for-ops",
+      "status": "published",
       "title": "Workflow Automation for Ops Teams",
       "shortTitle": "Workflow automation for ops teams",
       "summary": "Remove repetitive operational work by connecting systems, approvals, and handoffs into one monitored workflow.",
       "seoTitle": "Workflow Automation for Ops Teams",
       "metaDescription": "See how Forsch implements workflow automation for ops teams across approvals, handoffs, and system-to-system processes.",
+      "focusKeyword": "workflow automation for ops teams",
+      "keywords": [
+        "workflow automation for ops teams",
+        "operations workflow automation",
+        "AI ops automation",
+        "business process automation"
+      ],
+      "updatedAt": "2026-04-14T00:00:00.000Z",
       "audience": [
         "Operations leads",
         "BizOps teams",
@@ -898,23 +953,67 @@
       "id": "how-to-prioritize-ai-workflows",
       "type": "blog",
       "slug": "how-to-prioritize-ai-workflows",
+      "status": "published",
       "title": "How to Prioritize AI Workflows Before You Build",
       "summary": "A practical framework for choosing which AI workflow to implement first when your team has more ideas than capacity.",
+      "excerpt": "A practical framework for choosing which AI workflow to implement first when your team has more ideas than capacity.",
       "seoTitle": "How to Prioritize AI Workflows Before You Build",
       "metaDescription": "A practical Forsch guide for evaluating AI workflow ideas based on business value, operational friction, and implementation complexity.",
+      "focusKeyword": "prioritize AI workflows",
+      "keywords": [
+        "prioritize AI workflows",
+        "AI workflow prioritization",
+        "AI roadmap planning",
+        "production AI strategy"
+      ],
+      "canonicalPath": "/blog/how-to-prioritize-ai-workflows",
       "category": "Strategy",
       "publishedAt": "2026-04-03",
+      "updatedAt": "2026-04-10T00:00:00.000Z",
       "heroLabel": "Blog",
+      "authorName": "Forsch",
+      "authorRole": "AI Implementation Partner",
+      "intro": "The hardest part of an AI roadmap is rarely generating ideas. The hard part is deciding which workflow deserves production attention first and which ones should wait.",
       "body": [
         "Most teams do not have an AI idea problem. They have a prioritization problem. Too many opportunities look promising in theory, but only a few can justify the integration work, workflow change, and operational ownership required to ship them well.",
         "The right starting point is usually a workflow with visible friction, measurable cost, and a clear owner. If a process is already loosely defined, full of exceptions, or unsupported by clean source systems, it will be difficult to improve with AI in a durable way.",
         "At Forsch, the best early candidates often share three traits: they remove repetitive human effort, they improve speed in a meaningful business moment, and they fit inside an operational workflow that can be monitored once deployed."
+      ],
+      "sections": [
+        {
+          "heading": "Look for operational gravity",
+          "paragraphs": [
+            "A workflow is a strong early AI candidate when the pain is already visible to the business. Repetitive work, response-time bottlenecks, and delayed handoffs are usually better opportunities than speculative experiments."
+          ],
+          "bullets": [
+            "Choose work that already has an owner.",
+            "Prefer workflows with measurable before-and-after metrics.",
+            "Favor systems where source data is reliable enough to automate around."
+          ]
+        },
+        {
+          "heading": "De-risk the first implementation",
+          "paragraphs": [
+            "The first AI workflow should improve something meaningful without depending on a perfect process. That gives the team room to learn how approvals, observability, and human review need to work in production."
+          ]
+        }
       ],
       "takeaways": [
         "Start with a workflow that already matters to the business.",
         "Prioritize clear ownership and measurable outcomes.",
         "Avoid ideas that depend on vague processes or weak source systems."
       ],
+      "faqs": [
+        {
+          "question": "What is the best first AI workflow to automate?",
+          "answer": "Usually one with visible business friction, clear ownership, and measurable outcomes such as lead routing, support triage, or recurring reporting."
+        },
+        {
+          "question": "Should teams start with a customer-facing AI feature?",
+          "answer": "Only if the surrounding workflow, data access, and review controls are mature enough to support a production release. Internal workflows are often the better first proving ground."
+        }
+      ],
+      "readingTimeMinutes": 4,
       "cta": "Talk through your AI roadmap"
     }
   ],
@@ -1118,23 +1217,67 @@
       "id": "what-makes-ai-implementation-fail",
       "type": "article",
       "slug": "what-makes-ai-implementation-fail",
+      "status": "published",
       "title": "What Makes AI Implementation Fail After the Demo",
       "summary": "Why promising AI concepts break down in production, and what teams need to design differently from the start.",
+      "excerpt": "Why promising AI concepts break down in production, and what teams need to design differently from the start.",
       "seoTitle": "What Makes AI Implementation Fail After the Demo",
       "metaDescription": "A detailed Forsch article on why AI initiatives fail after the demo stage and how to design for production realities from the start.",
+      "focusKeyword": "AI implementation failure",
+      "keywords": [
+        "AI implementation failure",
+        "production AI systems",
+        "AI workflow design",
+        "AI deployment risks"
+      ],
+      "canonicalPath": "/articles/what-makes-ai-implementation-fail",
       "category": "Implementation",
       "publishedAt": "2026-04-03",
+      "updatedAt": "2026-04-11T00:00:00.000Z",
       "heroLabel": "Article",
+      "authorName": "Forsch",
+      "authorRole": "AI Implementation Partner",
+      "intro": "A polished demo can make an AI initiative look much more production-ready than it really is. The operational complexity shows up later, once the workflow meets real systems, real exceptions, and real ownership questions.",
       "body": [
         "A strong demo can hide most of the things that make an AI system hard to run in production. During a demo, the prompt is clean, the context is curated, and no one asks what should happen when inputs are incomplete, confidence is low, or systems fail downstream.",
         "The production version of the problem is different. Teams need observability, ownership, approval rules, exception handling, retriable steps, and a clear decision on where human review belongs. Without that, the system may look intelligent but still create operational drag.",
         "This is why Forsch treats implementation as a workflow problem first and a model problem second. If the workflow is not grounded in real systems, feedback loops, and measurable outcomes, the AI layer will not create durable value."
+      ],
+      "sections": [
+        {
+          "heading": "Demos remove the hard edges",
+          "paragraphs": [
+            "Most demos avoid messy inputs, missing data, approval bottlenecks, and downstream failures. Those are exactly the details production teams have to own."
+          ],
+          "bullets": [
+            "Context is cleaner in a demo than it will be in production.",
+            "Failure handling usually is not designed until much later.",
+            "Human review decisions are often left ambiguous."
+          ]
+        },
+        {
+          "heading": "Production value requires workflow design",
+          "paragraphs": [
+            "A working prompt is not enough. Teams need instrumentation, escalation rules, retry paths, and a clear operating model so the AI system improves the workflow instead of introducing new operational drag."
+          ]
+        }
       ],
       "takeaways": [
         "Demos hide operational complexity.",
         "Production systems need review controls and failure handling.",
         "Workflow design matters as much as model behavior."
       ],
+      "faqs": [
+        {
+          "question": "Why do AI projects fail after a successful demo?",
+          "answer": "Because the demo rarely forces the team to solve ownership, observability, exception handling, and human review in the real workflow."
+        },
+        {
+          "question": "What should teams design before shipping AI to production?",
+          "answer": "They should define workflow ownership, safe fallback behavior, approval rules, monitoring, and what happens when confidence is low or inputs are incomplete."
+        }
+      ],
+      "readingTimeMinutes": 5,
       "cta": "Talk through your production AI workflow"
     }
   ]

@@ -1,32 +1,48 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getContentCollection, getContentItem } from "../../../lib/content-store";
+import { getPublicContentCollection, getPublicContentItem } from "../../../lib/content-store";
+import { buildPublicUrl } from "../../../lib/site-config";
+import {
+  buildBreadcrumbStructuredData,
+  buildContentMetadata,
+  buildFaqStructuredData,
+  buildUseCaseStructuredData
+} from "../../../lib/seo";
+
+function VisualFigure({ image, fallbackTitle = "Planned visual" }) {
+  if (!image) {
+    return null;
+  }
+
+  if (image.assetExists && image.src) {
+    return (
+      <figure className="detail-visual">
+        <img src={image.src} alt={image.alt || fallbackTitle} />
+        <figcaption>{image.alt || fallbackTitle}</figcaption>
+      </figure>
+    );
+  }
+
+  return (
+    <figure className="detail-visual detail-visual-planned">
+      <figcaption>{image.alt || fallbackTitle}</figcaption>
+    </figure>
+  );
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const useCase = await getContentItem("use-case", slug);
+  const useCase = await getPublicContentItem("use-case", slug);
 
   if (!useCase) {
     return {};
   }
 
-  return {
-    title: useCase.seoTitle || useCase.title,
-    description: useCase.metaDescription || useCase.summary,
-    alternates: {
-      canonical: `/use-cases/${useCase.slug}`
-    },
-    openGraph: {
-      title: `${useCase.seoTitle || useCase.title} | Forsch`,
-      description: useCase.metaDescription || useCase.summary,
-      url: `https://forsch.io/use-cases/${useCase.slug}`,
-      type: "article"
-    }
-  };
+  return buildContentMetadata("use-case", useCase);
 }
 
 export async function generateStaticParams() {
-  const useCases = await getContentCollection("use-case");
+  const useCases = await getPublicContentCollection("use-case");
 
   return useCases.map((item) => ({
     slug: item.slug
@@ -36,8 +52,8 @@ export async function generateStaticParams() {
 function SectionList({ items }) {
   return (
     <ul className="detail-list">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
+      {items.map((item, index) => (
+        <li key={`${item}-${index}`}>{item}</li>
       ))}
     </ul>
   );
@@ -45,28 +61,31 @@ function SectionList({ items }) {
 
 export default async function UseCaseDetailPage({ params }) {
   const { slug } = await params;
-  const useCase = await getContentItem("use-case", slug);
+  const useCase = await getPublicContentItem("use-case", slug);
 
   if (!useCase) {
     notFound();
   }
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://forsch.io" },
-      { "@type": "ListItem", position: 2, name: "Use Cases", item: "https://forsch.io/use-cases" },
-      { "@type": "ListItem", position: 3, name: useCase.title, item: `https://forsch.io/use-cases/${useCase.slug}` }
-    ]
-  };
+  const structuredData = [
+    buildBreadcrumbStructuredData([
+      { name: "Home", url: buildPublicUrl("/") },
+      { name: "Use Cases", url: buildPublicUrl("/use-cases") },
+      { name: useCase.title, url: buildPublicUrl(`/use-cases/${useCase.slug}`) }
+    ]),
+    buildUseCaseStructuredData(useCase),
+    buildFaqStructuredData(useCase.faqs || [])
+  ].filter(Boolean);
 
   return (
     <main className="use-case-page-shell">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      {structuredData.map((item, index) => (
+        <script
+          key={`use-case-jsonld-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+        />
+      ))}
 
       <div className="container use-case-container">
         <nav className="breadcrumbs" aria-label="Breadcrumb">
@@ -81,6 +100,16 @@ export default async function UseCaseDetailPage({ params }) {
           <p className="section-tag">{useCase.shortTitle}</p>
           <h1>{useCase.title}</h1>
           <p className="use-case-hero-copy">{useCase.summary}</p>
+          {useCase.heroImage ? (
+            <VisualFigure
+              image={{
+                src: useCase.heroImage,
+                alt: useCase.heroImageAlt,
+                assetExists: useCase.heroImageExists
+              }}
+              fallbackTitle={useCase.heroImageAlt || useCase.title}
+            />
+          ) : null}
         </section>
 
         <div className="detail-grid">
@@ -118,23 +147,38 @@ export default async function UseCaseDetailPage({ params }) {
             <p className="section-tag">Integrations</p>
             <h2>Systems this workflow commonly connects to</h2>
             <div className="tag-list">
-              {(useCase.integrations || []).map((integration) => (
-                <span key={integration}>{integration}</span>
+              {(useCase.integrations || []).map((integration, index) => (
+                <span key={`${integration}-${index}`}>{integration}</span>
               ))}
             </div>
           </section>
-          <section className="detail-card">
-            <p className="section-tag">FAQ</p>
-            <h2>Questions teams usually ask</h2>
-            <div className="faq-list">
-              {(useCase.faqs || []).map((faq) => (
-                <article key={faq.question} className="faq-item">
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </article>
+          {(useCase.faqs || []).length > 0 ? (
+            <section className="detail-card">
+              <p className="section-tag">FAQ</p>
+              <h2>Questions teams usually ask</h2>
+              <div className="faq-list">
+                {(useCase.faqs || []).map((faq, index) => (
+                  <article key={`${faq.question}-${index}`} className="faq-item">
+                    <h3>{faq.question}</h3>
+                    <p>{faq.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ) : null}
+          {(useCase.inlineImageSuggestions || []).length > 0 ? (
+            <section className="detail-card">
+              <p className="section-tag">Workflow visual</p>
+              <h2>Planned implementation references</h2>
+              {useCase.inlineImageSuggestions.map((image, index) => (
+                <VisualFigure
+                  key={`${useCase.slug}-visual-${index}`}
+                  image={image}
+                  fallbackTitle={image.alt || "Workflow visual"}
+                />
               ))}
-            </div>
-          </section>
+            </section>
+          ) : null}
         </div>
 
         <section className="detail-cta">

@@ -1,39 +1,51 @@
 import Link from "next/link";
-import { getContentCollection } from "../../lib/content-store";
+import { getPublicContentCollection } from "../../lib/content-store";
+import { buildPublicUrl } from "../../lib/site-config";
+import {
+  buildBreadcrumbStructuredData,
+  buildCollectionMetadata,
+  buildCollectionStructuredData
+} from "../../lib/seo";
 
-export const metadata = {
+export const metadata = buildCollectionMetadata({
   title: "AI Use Cases",
   description:
     "Explore practical AI implementation use cases from Forsch, including lead qualification, support copilots, internal knowledge systems, reporting automation, and workflow automation.",
-  alternates: {
-    canonical: "/use-cases"
-  },
-  openGraph: {
-    title: "AI Use Cases | Forsch",
-    description:
-      "A library of practical AI implementation use cases for revenue, support, operations, reporting, and product teams.",
-    url: "https://forsch.io/use-cases",
-    type: "website"
-  }
-};
+  path: "/use-cases",
+  keywords: [
+    "AI use cases",
+    "AI workflow automation",
+    "AI lead qualification",
+    "AI support copilot",
+    "Forsch use cases"
+  ]
+});
 
 export default async function UseCasesPage() {
-  const useCases = await getContentCollection("use-case");
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://forsch.io" },
-      { "@type": "ListItem", position: 2, name: "Use Cases", item: "https://forsch.io/use-cases" }
-    ]
-  };
+  const useCases = await getPublicContentCollection("use-case");
+  const structuredData = [
+    buildBreadcrumbStructuredData([
+      { name: "Home", url: buildPublicUrl("/") },
+      { name: "Use Cases", url: buildPublicUrl("/use-cases") }
+    ]),
+    buildCollectionStructuredData({
+      title: "Forsch AI Use Cases",
+      description:
+        "A library of practical AI implementation use cases for revenue, support, operations, reporting, and product teams.",
+      path: "/use-cases",
+      items: useCases
+    })
+  ].filter(Boolean);
 
   return (
     <main className="use-case-page-shell">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      {structuredData.map((item, index) => (
+        <script
+          key={`use-cases-jsonld-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+        />
+      ))}
 
       <div className="container use-case-container">
         <nav className="breadcrumbs" aria-label="Breadcrumb">
@@ -55,12 +67,21 @@ export default async function UseCasesPage() {
         <section className="hub-grid" aria-label="Use case library">
           {useCases.map((item) => (
             <article key={item.slug} className="hub-card">
+              {item.heroImage ? (
+                <div className="hub-visual">
+                  {item.heroImageExists ? (
+                    <img src={item.heroImage} alt={item.heroImageAlt || item.title} />
+                  ) : (
+                    <p>{item.heroImageAlt || item.title}</p>
+                  )}
+                </div>
+              ) : null}
               <p className="section-tag">{item.shortTitle}</p>
               <h2>{item.title}</h2>
               <p>{item.summary}</p>
               <div className="hub-audience">
-                {(item.audience || []).map((group) => (
-                  <span key={group}>{group}</span>
+                {(item.audience || []).map((group, index) => (
+                  <span key={`${group}-${index}`}>{group}</span>
                 ))}
               </div>
               <Link href={`/use-cases/${item.slug}`} className="button button-primary">

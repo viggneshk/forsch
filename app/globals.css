@@ -732,6 +732,42 @@ aside {
   padding: 1.75rem;
 }
 
+.hub-visual,
+.detail-visual {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: calc(var(--radius-lg) - 0.35rem);
+  background: #f6f9fc;
+}
+
+.hub-visual {
+  margin-bottom: 1rem;
+}
+
+.hub-visual img,
+.detail-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hub-visual p,
+.detail-visual figcaption {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  color: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.detail-visual {
+  margin-top: 1.25rem;
+}
+
+.detail-visual-planned {
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .hub-card h2,
 .detail-card h2,
 .faq-item h3 {
