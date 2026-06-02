@@ -19,7 +19,7 @@
       "focusKeyword": "dental AI automation",
       "searchIntent": "commercial investigation",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-05-30-ai-automation-for-dental",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-05-dental-ai-automation-for-missed-calls-and-treatment-follow-up",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -31,11 +31,17 @@
         "/articles/what-makes-ai-implementation-fail"
       ],
       "cta": "Talk through your dental follow-up workflow",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "dental-ai-automation",
+        "title": "Dental AI Automation for Missed Calls and Treatment Follow-Up",
+        "primaryKeyword": "dental AI automation",
+        "path": "useCases",
+        "destinationPath": "/use-cases/dental-ai-automation"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "dental-ai-automation-workflow-forsch.png",
@@ -152,7 +158,7 @@
       "focusKeyword": "pet boarding AI automation",
       "searchIntent": "commercial investigation",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-05-29-ai-automation-for-pet-boarding",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-04-pet-boarding-ai-automation-for-booking-triage",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -164,11 +170,17 @@
         "/articles/chatbot-is-not-the-automation"
       ],
       "cta": "Talk through your pet boarding booking workflow",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "pet-boarding-ai-automation",
+        "title": "Pet Boarding AI Automation for Booking Triage",
+        "primaryKeyword": "pet boarding AI automation",
+        "path": "useCases",
+        "destinationPath": "/use-cases/pet-boarding-ai-automation"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "pet-boarding-ai-automation-workflow-forsch.png",
@@ -284,7 +296,7 @@
       "focusKeyword": "car wash AI automation",
       "searchIntent": "commercial investigation",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-05-28-ai-automation-for-car-wash",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-03-car-wash-ai-automation-for-memberships-and-service-recovery",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -296,11 +308,17 @@
         "/articles/what-makes-ai-implementation-fail"
       ],
       "cta": "Talk through your car wash membership workflow",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "car-wash-ai-automation",
+        "title": "Car Wash AI Automation for Memberships and Service Recovery",
+        "primaryKeyword": "car wash AI automation",
+        "path": "useCases",
+        "destinationPath": "/use-cases/car-wash-ai-automation"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "car-wash-ai-automation-workflow-forsch.png",
@@ -417,7 +435,7 @@
       "focusKeyword": "self storage AI automation",
       "searchIntent": "commercial investigation",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-05-27-ai-automation-for-self-storage",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-02-self-storage-ai-automation-for-missed-calls-and-reservations",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -429,11 +447,17 @@
         "/articles/chatbot-is-not-the-automation"
       ],
       "cta": "Talk through your self storage inquiry workflow",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "self-storage-ai-automation",
+        "title": "Self Storage AI Automation for Missed Calls and Reservations",
+        "primaryKeyword": "self storage AI automation",
+        "path": "useCases",
+        "destinationPath": "/use-cases/self-storage-ai-automation"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "self-storage-ai-automation-workflow-forsch.png",
@@ -1036,7 +1060,7 @@
       "focusKeyword": "AI automation integration",
       "searchIntent": "informational",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-06-01-ai-automation-implementation-reality",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-07-the-chatbot-is-not-the-automation",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -1049,11 +1073,17 @@
         "/use-cases/self-storage-ai-automation"
       ],
       "cta": "Talk through the system connections your AI workflow needs",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "chatbot-is-not-the-automation",
+        "title": "The Chatbot Is Not the Automation",
+        "primaryKeyword": "AI automation integration",
+        "path": "articles",
+        "destinationPath": "/articles/chatbot-is-not-the-automation"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "chatbot-is-not-the-automation-workflow-forsch.png",
@@ -1133,7 +1163,7 @@
       "focusKeyword": "local service AI automation",
       "searchIntent": "informational",
       "sourcePostUrl": "",
-      "sourcePostId": "aiagency-weekly-pack-2026-05-31-cross-domain-local-service-ai-automation-pattern",
+      "sourcePostId": "aiagency-weekly-pack-2026-06-06-the-local-service-ai-automation-pattern",
       "sourcePlatform": "weekly_pack_fallback",
       "sourceViews": 0,
       "rankByViews": 0,
@@ -1147,11 +1177,17 @@
         "/use-cases/dental-ai-automation"
       ],
       "cta": "Talk through the local service workflow worth automating first",
-      "publishedAt": "2026-05-27",
-      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-06-02",
+      "updatedAt": "2026-06-02",
       "selectedReason": "Selected from the configured weekly-pack fallback because the previous-week top-view selection did not yield 6 safe website pieces.",
-      "action": "create_new_page",
-      "existingContent": {},
+      "action": "update_existing_page",
+      "existingContent": {
+        "slug": "local-service-ai-automation-pattern",
+        "title": "The Local Service AI Automation Pattern",
+        "primaryKeyword": "local service AI automation",
+        "path": "articles",
+        "destinationPath": "/articles/local-service-ai-automation-pattern"
+      },
       "imagePlan": {
         "heroImage": {
           "filename": "local-service-ai-automation-pattern-workflow-forsch.png",
