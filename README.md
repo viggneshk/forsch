@@ -2,6 +2,20 @@
 
 SEO-friendly Next.js marketing website for Forsch, based on the provided JSX homepage reference.
 
+## Production domain
+
+The canonical website origin is `https://forsch.ai`, configured in `lib/site-config.js`.
+Use this origin for web links and weekly content packs; absolute content URLs are
+validated against `forsch.ai` and `www.forsch.ai`. The contact inbox remains
+`hello@forsch.io`.
+
+Cloudflare Workers Builds deploys Worker `forsch-next-site` from `main`. Domains are
+managed in Cloudflare, with no routes declared in `wrangler.jsonc`. Keep the existing
+`forsch.io`, `forsch.ai`, and `www.forsch.ai` Worker attachments. The old zone's redirect
+rule sends `forsch.io` and `www.forsch.io` traffic to `https://forsch.ai` while preserving
+paths. Changing the canonical origin requires no runtime
+environment variable renames or changes to the host-only admin session cookie.
+
 ## Run locally
 
 ```bash

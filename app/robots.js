@@ -1,9 +1,11 @@
+import { buildPublicUrl } from "../lib/site-config";
+
 export default function robots() {
   return {
     rules: {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://forsch.io/sitemap.xml"
+    sitemap: buildPublicUrl("/sitemap.xml")
   };
 }
