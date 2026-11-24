@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { SITE_ORIGIN } from "../lib/site-config";
 
 const workflowSteps = [
   { title: "Capture inbound leads from forms and CRM", icon: "chat" },
@@ -70,7 +71,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Forsch",
-  url: "https://forsch.io",
+  url: SITE_ORIGIN,
   email: "hello@forsch.io",
   description:
     "Forsch designs, builds, and deploys production-ready AI systems for startups and growing companies.",
